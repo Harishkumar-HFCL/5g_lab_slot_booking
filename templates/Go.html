@@ -1,0 +1,73 @@
+<html>
+   <head>
+    <title>Dashboard/admin</title>
+    <style>
+            body {
+                background-image: url(https://t4.ftcdn.net/jpg/01/94/75/73/240_F_194757347_2kcvyt39VHvTyrKPLrh3YnVTOYFnYeeR.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-color: #513ef5;
+                background-blend-mode: darken;
+            }
+            .header {
+                background-color:rgb(47, 0, 255);
+                padding:10px;
+                font-size: 30px;
+                color: aliceblue;
+                font-weight: bold;
+            }
+            .tbl_header{
+                border-bottom: 1px solid rgb(201, 161, 161);
+                padding:5px;
+                text-align:center;
+                font-weight: bold;
+            }
+            .divmenu{
+                padding:5px;
+                background-color:lightgray;
+                text-align:left;
+
+            }
+            .divmenu a{
+                color: rgb(9, 9, 248);
+                margin:10px;
+                font-weight: bold;
+                text-decoration: none;
+                text-shadow: 1px 1px 1px #06ebfc,
+                             1px 2px 1px #06ebfc,
+                             1px 3px 1px #06ebfc,
+                         1px 10px 6px rgba(245, 247, 248, 0.4),
+                         1px 15px 20px rgba(245, 247, 248, 0.4);
+                        
+                         
+            }
+    </style>
+   </head> 
+   <body>
+    <form acton="/" method="post">
+      <div class="header">
+        Dashboard/Admin
+      </div>
+      <div class="divmenu">
+    <label for="services-select"></label>
+
+    
+<select name="service" id="services-select">
+    <option value="">List of service</option>
+    <option value="5G">5G</option>
+    <option value="Wi-Fi">Wi-Fi</option>
+    <option value="FPGI">FPGI</option>
+    <option value="SI">Si</option>
+    <option value="R&D">R&D</option>
+</select>
+        |
+        <a href="/">Pending Request</a>
+        |
+        <a href="/">Accept&Reject Request</a>
+        |
+        <a href="/">Recent bookings</a>
+      </div>
+    </form>
+   </body>
+</html>

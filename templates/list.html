@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            body {
+                background-image: url(https://t4.ftcdn.net/jpg/01/94/75/73/240_F_194757347_2kcvyt39VHvTyrKPLrh3YnVTOYFnYeeR.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-color: #513ef5;
+                background-blend-mode: darken;
+            }
+            .header {
+                background-color:rgb(14, 10, 252);
+                padding:10px;
+                font-size: 30px;
+                color: aliceblue;
+                font-size: 30;
+                font-weight: bold;
+            }
+            .tbl_header{
+                border-bottom: 1px solid gray;
+                padding:5px;
+                text-align:center;
+                font-weight: bold;
+            }
+            .divmenu{
+                padding:5px;
+                background-color:lightgray;
+                text-align:right;
+
+            }
+            .divmenu a{
+                color: blue;
+                font-weight: bold;
+                font-size: 20;
+                margin:10px;
+                text-decoration: none;
+
+            }
+            div.a {
+                color: aliceblue;
+                font-size: 20;
+                font-weight: bold;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+            Slot Booking
+        </div>
+        <div class="divmenu">
+            <a href="/bookSlot">Book a Slot</a>
+            |
+            <a href="/">Logout</a>
+        </div>
+        <br/><br/>
+        <div class="a" align="center">
+            List of Bookings
+            <table border="1" cellpadding="3" cellspacing="3" style="color: white;">
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Book date</th>
+                    <th>Department</th>
+                    <th>Activity</th>
+                    <th>Reason</th>
+                    <th>Members</th>
+                </tr>
+                {%
+                    for item in listBookings
+                %}
+                    <tr>
+                        <td>{{item['Empid']}}</td>
+                        <td>{{item['Bookdate']}}</td>
+                        <td>{{item['Dept']}}</td>
+                        <td>{{item['Activity']}}</td>
+                        <td>{{item['Reason']}}</td>
+                        <td>{{item['Members']}}</td>
+                        
+                    </tr>
+
+
+                {%
+                    endfor
+                %}
+            </table>
+        </div>
+       
+    </body>
+</html>
